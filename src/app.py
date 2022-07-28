@@ -35,6 +35,8 @@ df_raw=pd.get_dummies(df_raw,drop_first=True)
 # drop duplicates
 df_raw=df_raw.drop_duplicates().reset_index(drop= True)
 
+x = sm.add_constant(X)
+result = sm.OLS(y, x).fit()
 
 #loaded_model = pickle.load(open(filename, 'rb'))
 
