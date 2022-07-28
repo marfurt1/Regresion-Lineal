@@ -35,8 +35,9 @@ df_raw=pd.get_dummies(df_raw,drop_first=True)
 # drop duplicates
 df_raw=df_raw.drop_duplicates().reset_index(drop= True)
 
-x = sm.add_constant(X)
-result = sm.OLS(y, x).fit()
+df_raw['charges_log'] = np.log10(df_raw['charges']+10**(-6))
+
+
 
 #loaded_model = pickle.load(open(filename, 'rb'))
 
