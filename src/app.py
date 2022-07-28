@@ -29,8 +29,8 @@ import statsmodels.api as sm
 url = 'https://raw.githubusercontent.com/4GeeksAcademy/linear-regression-project-tutorial/main/medical_insurance_cost.csv'
 df_raw=pd.read_csv(url)
 
-
-pd.get_dummies(df_raw,drop_first=True)
+# dumies
+df_raw=pd.get_dummies(df_raw,drop_first=True)
 
 # drop duplicates
 df_raw=df_raw.drop_duplicates().reset_index(drop= True)
