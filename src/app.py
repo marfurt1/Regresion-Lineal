@@ -38,7 +38,7 @@ df_raw=df_raw.drop_duplicates().reset_index(drop= True)
 
 #loaded_model = pickle.load(open(filename, 'rb'))
 
-pickle.load(open("../models/finalized_model.sav, 'rb'"))
+pickle.load(open("../models/finalized_model.sav", 'rb'))
 
 #Predict using the model whith new data
 print('Predicted ] : \n', loaded_model.predict(X_test[40,1,22,1,1,1,0,0]))
