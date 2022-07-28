@@ -41,5 +41,5 @@ df_raw=df_raw.drop_duplicates().reset_index(drop= True)
 modelo = pickle.load(open("../models/finalized_model.sav", 'rb'))
 
 #Predict using the model whith new data
-print('Predicted ] : \n', modelo.predict([40,1,22,1,1,1,0,0]))
 
+print('Predicted prima : \n', modelo.predict([[40,1,22,1,1,1,0,0]]))
