@@ -37,11 +37,12 @@ df_raw=df_raw.drop_duplicates().reset_index(drop= True)
 
 
 
-
+#cargo los modelos
 #loaded_model = pickle.load(open(filename, 'rb'))
+modelo_datos = pickle.load(open("../models/modelo_para_transformar_datos.sav", 'rb'))
 
 modelo = pickle.load(open("../models/finalized_model.sav", 'rb'))
 
 #Predict using the model whith new data
 
-print('Predicted prima : \n', modelo.predict([[40,1,22,1,1,1,0,0]]))
+print('Predicted prima : \n', modelo.predict(modelo_datos.transform([[40,1,22,1,1,1,0,0]])))
